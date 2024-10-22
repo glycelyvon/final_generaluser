@@ -1,0 +1,290 @@
+<html>
+<head>
+    <title>CompaniON</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+         margin: 0;
+         padding: 0;
+         background-color: #f5f5f5;
+     }
+     header {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ height: 60px; /* Fixed height for the navbar */
+ padding: 0 20px; /* Horizontal padding */
+ background-color: #e8f1e1;
+ border-bottom: 1px solid #ddd;
+ margin: 0;
+}
+
+/* Logo */
+header .logo {
+ max-width: 150px;
+ height: auto;
+}
+
+header .logo img {
+ max-width: 100%;
+ height: auto;
+}
+
+/* Navigation Bar */
+header .nav {
+ display: flex;
+ align-items: center;
+ flex-grow: 1;
+ justify-content: space-between;
+ margin-left: 20px; /* Increased space between logo and nav */
+}
+
+/* Search Bar */
+header .search-bar {
+ flex-grow: 1;
+ display: flex;
+ justify-content: center;
+ margin-right: 20px; /* Increased spacing on the right side of the search bar */
+}
+
+header .search-bar input {
+ width: 50%;
+ padding: 6px;
+ border-width: 1px;
+ border-style: solid;
+ border-color: rgb(221, 221, 221);
+ border-radius: 4px;
+ transition: width 0.3s ease-in-out;
+}
+
+/* Navigation Links */
+header .nav ul {
+ list-style-type: none;
+ display: flex;
+ gap: 20px; /* Increased gap between navigation links */
+ margin: 0;
+}
+
+header .nav ul li {
+ transition: transform 0.3s ease-in-out;
+}
+
+header .nav ul li a {
+ text-decoration: none;
+ color: #333;
+ font-weight: bold;
+ transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header .nav ul li a:hover {
+ color: #718659;
+ transform: scale(1.1);
+}
+        .container {
+            width: 60%;
+            margin: 50px auto;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .stars {
+            color: green;
+            margin-bottom: 10px;
+        }
+        .line {
+            border-top: 1px solid #ddd;
+            margin: 10px 0;
+        }
+        .availability-calendar, .feedbacks {
+            background-color: #f0f0f5;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 20px;
+        }
+        .availability-calendar {
+            float: left;
+            width: 45%;
+            height: 300px;
+            border-radius: 20px;
+        }
+        .availability-details {
+            float: right;
+            width: 45%;
+            height: 300px;
+        }
+        .feedbacks {
+            clear: both;
+            height: auto;
+            border-radius: 20px;
+        }
+        .feedback-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .feedback-item img {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+        .feedback-item .feedback-text {
+            flex-grow: 1;
+        }
+        .feedback-item .feedback-stars {
+            color: green;
+        }
+        .buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .button {
+            background-color: #a3c293;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .button:hover {
+            background-color: #8fae7a;
+        }
+    </style>
+
+    
+</head>
+<body>
+    <header>
+        <div class="logo">
+          <img src="Assets/logo.png" alt="CompaniON Logo" />
+        </div>
+  
+        <div class="nav">
+          <div class="search-bar">
+            <input placeholder="What are you looking for?" type="text" />
+          </div>
+          <ul>
+            <li><a href="index.html">Home </a></li>
+            <li><a href="rentcompanion.html">Companion </a></li>
+            <li><a href="howitworks.html">How it works </a></li>
+            <li><a href="">Profile</a></li>
+          </ul>
+        </div>
+      </header>
+
+
+    <div class="container">
+        <div class="header">Earlla Yvon</div>
+       
+            <p> An outgoing and creative individual who loves exploring new places in the city. She's passionate about art, photography, and good conversation. She enjoys spending time in nature and is open to various activities like hiking, visiting art galleries, or just grabbing coffee at a local cafe.</p>
+        
+        <div class="header">Availability Calendar</div>
+        <div class="availability-calendar" id="calendar"></div>
+        <div class="availability-details">
+            <h2 class="section-title">Interests & Hobbies</h2>
+            <ul>
+                <li><strong>Photography</strong>: Loves capturing nature and cityscapes.</li>
+                <li><strong>Art</strong>: Enjoys visiting museums, art galleries, and attending workshops.</li>
+                <li><strong>Outdoor Adventures</strong>: Hiking, biking, or exploring new parks.</li>
+                <li><strong>Movies</strong>: A fan of thrillers, action, and independent films.</li>
+                </ul>
+    
+         
+    
+            <h2 class="section-title">Contact Information</h2>
+            <ul>
+                <li><strong>Preferred Contact</strong>: In-app messaging</li>
+                <li><strong>Direct Email</strong>: <a href="mailto:anna@example.com">earlla@gmail.com </a> </li>
+            </ul>
+        </div>
+           
+            
+       
+        
+        <div class="feedbacks">
+            <div class="header">Feedback</div>
+
+            <div class="feedback-item">
+                <img src="Assets/5.png" alt="User profile picture">
+                <div class="feedback-text">
+                    <p><strong>Glycella Yvona Virtucio</strong></p>
+                    <p>She is very easy to talk to and we had a great time exploring the local parks</p>
+                </div>
+                <div class="feedback-stars">
+                    <i class="fas fa-star"></i>
+                    <i> 5.0</i>
+                </div>
+            </div>
+            <div class="feedback-item">
+                <img src="Assets/6.png" alt="User profile picture">
+                <div class="feedback-text">
+                    <p><strong>Kylle Mark Paragas</strong></p>
+                    <p>Great experience! Very friendly and fun to be around</p>
+                </div>
+                <div class="feedback-stars">
+                    <i class="fas fa-star"></i>
+                    <i> 5.0</i>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <a href="rentcompanion.html"> <button class="button">Back</button></a> 
+            <a href="bookingdetails.html"><button class="button">Book Now</button></a>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#calendar').fullCalendar({
+                // Customize the calendar options here
+                header: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'month,agendaWeek,agendaDay'
+                },
+                defaultDate: '2023-10-01',
+                navLinks: true, // can click day/week names to navigate views
+                editable: true,
+                eventLimit: true, // allow "more" link when too many events
+                height: 300, // Fit the calendar to the container height
+                events: [
+                    {
+                        title: 'Event 1',
+                        start: '2023-10-01'
+                    },
+                    {
+                        title: 'Event 2',
+                        start: '2023-10-07',
+                        end: '2023-10-10'
+                    },
+                    {
+                        title: 'Event 3',
+                        start: '2023-10-09T16:00:00'
+                    },
+                    {
+                        title: 'Event 4',
+                        start: '2023-10-16T16:00:00'
+                    },
+                    {
+                        title: 'Event 5',
+                        start: '2023-10-11',
+                        end: '2023-10-13'
+                    }
+                ]
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,385 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+            padding: 0 20px;
+            background-color: #e8f1e1;
+            border-bottom: 1px solid #ddd;
+            margin: 0;
+        }
+        header .logo {
+            max-width: 150px;
+            height: auto;
+        }
+        header .logo img {
+            max-width: 100%;
+            height: auto;
+        }
+        header .nav {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+            justify-content: space-between;
+            margin-left: 20px;
+        }
+        header .search-bar {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            margin-right: 20px;
+        }
+        header .search-bar input {
+            width: 50%;
+            padding: 6px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: rgb(221, 221, 221);
+            border-radius: 4px;
+            transition: width 0.3s ease-in-out;
+        }
+        header .nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+        }
+        header .nav ul li {
+            transition: transform 0.3s ease-in-out;
+        }
+        header .nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        header .nav ul li a:hover {
+            color: #718659;
+            transform: scale(1.1);
+        }
+        .content {
+            flex-grow: 1;
+            overflow-y: auto;
+            padding: 20px;
+        }
+        .container {
+            background-color: white;
+            padding: 20px 40px 20px 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 600px;
+            margin: 20px auto;
+        }
+        .header {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            font-size: 24px;
+            color: #2e7d32;
+            margin: 0;
+        }
+        .header .stars {
+            color: #2e7d32;
+        }
+        .header .lines {
+            margin-top: 10px;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ccc;
+            font-style: italic;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #2e7d32;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f5f5f5;
+            margin: 5px 0;
+        }
+        .form-group textarea {
+            height: 100px;
+            resize: both;
+        }
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+        }
+        .form-row .form-group {
+            width: 48%;
+        }
+        .form-row .form-group input {
+            margin: 5px 0;
+        }
+        .special-requests {
+            position: relative;
+        }
+        .special-requests span {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            color: #ccc;
+        }
+        .terms {
+            text-align: center;
+            margin: 20px 0;
+            color: #2e7d32;
+        }
+        .confirm-btn, .cancel-btn {
+            display: inline-block;
+            width: 100px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .confirm-btn {
+            background-color: #a5d6a7;
+            color: white;
+        }
+        .cancel-btn {
+            background-color: #e57373;
+            color: white;
+            margin-left: 10px;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+        }
+        .modal-content .modal-header {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .modal-content .modal-footer {
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Assets/logo.png" alt="CompaniON Logo" />
+        </div>
+        <div class="nav">
+            <div class="search-bar">
+                <input placeholder="What are you looking for?" type="text" />
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rentcompanion.html">Companion</a></li>
+                <li><a href="howitworks.html">How it works</a></li>
+                <li><a href="">Profile</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="content">
+        <div class="container">
+            <div class="header">
+                <h1>BOOK EARLLA YVON </h1>
+                <div class="lines">Short description here that fill out all</div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Preferred Date</label>
+                    <input type="text" id="preferred-date">
+                </div>
+                <div class="form-group">
+                    <label>Preferred Time</label>
+                    <input type="text" id="preferred-time">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Duration (hours)</label>
+                    <input type="number" min="1" max="24" step="1">
+                </div>
+                <div class="form-group">
+                    <label>Location/Place</label>
+                    <select id="location-place">
+                        <option value="The Outlets">The Outlets</option>
+                        <option value="SM City Lipa">SM City Lipa</option>
+                        <option value="Robinsons Lipa">Robinsons Lipa</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Event Type</label>
+                <select>
+                    <option value="">CICS Day at BatStateU Lipa</option>
+                    <option value="">Barako Festival</option>
+                    <option value="">Milo Marathon</option>
+                    <option value="">None</option>
+                </select>
+            </div>
+            <div class="form-group special-requests">
+                <label>Special Requests:</label>
+                <textarea></textarea>
+                <span>0/255</span>
+            </div>
+            <div class="terms">
+                <hr><label>
+  <input type="checkbox"> I have read and agree to the 
+  <a href="#" onclick="openModal('termsModal')">Terms and Conditions</a> and 
+  <a href="#" onclick="openModal('privacyModal')">Privacy Policy</a>.
+</label>
+            </div>
+            <button class="confirm-btn">Confirm</button>
+            <button class="cancel-btn">Cancel</button>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="cancelModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Are you sure you want to cancel?</h2>
+            </div>
+            <div class="modal-footer">
+                <button id="confirmCancel" class="confirm-btn">Yes</button>
+                <button id="closeModal" class="cancel-btn">No</button>
+            </div>
+        </div>
+    </div>
+
+  <!-- Modal for Confirm Booking -->
+<div id="confirmBookingModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Do you want to confirm your booking?</h2>
+        </div>
+        <div class="modal-footer">
+            <button id="confirmYes" class="confirm-btn">Yes</button>
+            <button id="confirmNo" class="cancel-btn">No</button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Booking Submitted -->
+<div id="bookingSubmittedModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Booking Submitted Successfully!</h2>
+        </div>
+        <div class="modal-footer">
+            <button id="goToProfile" class="confirm-btn">Go to Profile</button>
+        </div>
+    </div>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+   
+    <script>
+      
+      src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+    <script>
+        $(function() {
+            $("#preferred-date").datepicker();
+            $("#preferred-time").timepicker({
+                timeFormat: 'h:mm p',
+                interval: 30,
+                minTime: '6:00am',
+                maxTime: '11:00pm',
+                defaultTime: '6:00am',
+                startTime: '6:00am',
+                dynamic: false,
+                dropdown: true,
+                scrollbar: true
+            });
+        });
+
+// Modal functionality for Cancel action
+const cancelModal = document.getElementById("cancelModal");
+const cancelBtn = document.querySelector(".cancel-btn");
+const closeModal = document.getElementById("closeModal");
+const confirmCancel = document.getElementById("confirmCancel");
+
+cancelBtn.addEventListener("click", function() {
+    cancelModal.style.display = "block";
+});
+
+closeModal.addEventListener("click", function() {
+    cancelModal.style.display = "none";
+});
+
+confirmCancel.addEventListener("click", function() {
+    window.location.href = "companiondetails.html";
+});
+
+// Modal functionality for Confirm Booking
+const confirmBookingModal = document.getElementById("confirmBookingModal");
+const bookingSubmittedModal = document.getElementById("bookingSubmittedModal");
+const confirmBtn = document.querySelector(".confirm-btn");
+const confirmYes = document.getElementById("confirmYes");
+const confirmNo = document.getElementById("confirmNo");
+const goToProfile = document.getElementById("goToProfile");
+
+confirmBtn.addEventListener("click", function() {
+    confirmBookingModal.style.display = "block";
+});
+
+confirmNo.addEventListener("click", function() {
+    confirmBookingModal.style.display = "none";
+});
+
+confirmYes.addEventListener("click", function() {
+    confirmBookingModal.style.display = "none";
+    bookingSubmittedModal.style.display = "block";
+});
+
+goToProfile.addEventListener("click", function() {
+    window.location.href = "generaluserprofile.html";
+});
+</script>
+</body>
+</html>

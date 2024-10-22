@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CompaniON Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #f8f8f8;
+        color: #333;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 10px;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px; /* Fixed height for the navbar */
+        padding: 0 20px; /* Horizontal padding */
+        background-color: #e8f1e1;
+        border-bottom: 1px solid #ddd;
+        margin: 0;
+      }
+
+      /* Logo */
+      header .logo {
+        max-width: 150px;
+        height: auto;
+      }
+
+      header .logo img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      /* Navigation Bar */
+      header .nav {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        justify-content: space-between;
+        margin-left: 20px; /* Increased space between logo and nav */
+      }
+
+      /* Search Bar */
+      header .search-bar {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        margin-right: 20px; /* Increased spacing on the right side of the search bar */
+      }
+
+      header .search-bar input {
+        width: 50%;
+        padding: 6px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgb(221, 221, 221);
+        border-radius: 4px;
+        transition: width 0.3s ease-in-out;
+      }
+
+      /* Navigation Links */
+      header .nav ul {
+        list-style-type: none;
+        display: flex;
+        gap: 20px; /* Increased gap between navigation links */
+        margin: 0;
+      }
+
+      header .nav ul li {
+        transition: transform 0.3s ease-in-out;
+      }
+
+      header .nav ul li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        transition: color 0.3s ease, transform 0.3s ease;
+      }
+
+      header .nav ul li a:hover {
+        color: #718659;
+        transform: scale(1.1);
+      }
+
+      /* Responsive Behavior */
+      @media (max-width: 768px) {
+        header {
+          flex-direction: column;
+          height: auto; /* Auto height for smaller screens */
+          padding: 10px; /* Padding adjustment for smaller screens */
+        }
+
+        header .nav {
+          flex-direction: column;
+          align-items: center;
+          margin-left: 0;
+        }
+
+        header .search-bar input {
+          width: 80%;
+        }
+
+        header .nav ul {
+          flex-direction: column;
+          gap: 15px; /* Reduced gap for smaller screens */
+        }
+      }
+
+      /* Modal Styles */
+      .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        align-items: center;
+        justify-content: center;
+        z-index: 50;
+      }
+
+      .modal.active {
+        display: flex;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-100">
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <img src="Assets/logo.png" alt="CompaniON Logo" />
+      </div>
+
+      <div class="nav">
+        <div class="search-bar">
+          <input placeholder="What are you looking for?" type="text" />
+        </div>
+        <ul>
+          <li><a href="index.html">Home </a></li>
+          <li><a href="rentcompanion.html">Companion </a></li>
+          <li><a href="howitworks.html">How it works </a></li>
+          <li><a href="generaluserprofile.html">Profile</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-8">
+      <div class="flex space-x-8">
+        <!-- Profile Section -->
+        <div class="w-2/3">
+          <h2 class="text-xl font-bold mb-4">Profile</h2>
+          <div class="bg-white p-6 rounded-lg shadow-md mb-8">
+            <div class="flex items-center space-x-4">
+              <div
+                class="w-48 h-48 bg-gray-200 rounded-full flex items-center justify-center"
+              >
+                <img
+                  alt="Profile Picture"
+                  class="rounded-full"
+                  height="192"
+                  src="https://placehold.co/192x192"
+                  width="192"
+                />
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold">
+                  USERNAME
+                  <i class="fas fa-check-circle text-green-600"></i>
+                </h3>
+                <p class="text-lg">FULL NAME</p>
+                <p class="text-gray-600 mt-2">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur.
+                </p>
+                <p class="mt-2">
+                  <span class="font-bold">Status :</span> Verified
+                </p>
+                <a
+                  href="editprofile.html"
+                  class="mt-4 bg-green-600 text-white py-2 px-4 rounded-full"
+                  >Edit Profile</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Recent Activity Section -->
+          <h2 class="text-xl font-bold mb-4">Recent Activity</h2>
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <div class="overflow-x-auto">
+              <table class="min-w-full bg-white">
+                <thead>
+                  <tr>
+                    <th class="py-2 px-4 border-b-2 border-gray-200 text-left">
+                      Companion's Info
+                    </th>
+                    <th
+                      class="py-2 px-4 border-b-2 border-gray-200 text-left w-1/3"
+                    >
+                      Schedule
+                    </th>
+                    <th
+                      class="py-2 px-4 border-b-2 border-gray-200 text-center"
+                    >
+                      Actions
+                    </th>
+                    <th class="py-2 px-4 border-b-2 border-gray-200 text-left">
+                      Reviews
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="py-4 px-4 border-b border-gray-200">
+                      <div class="flex items-center space-x-4">
+                        <div
+                          class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center"
+                        >
+                          <img
+                            alt="Companion Picture"
+                            class="rounded-full"
+                            height="64"
+                            src="https://placehold.co/64x64"
+                            width="64"
+                          />
+                        </div>
+                        <div>
+                          <h3 class="font-bold">Niki Zefanya</h3>
+                          <p class="text-gray-600">
+                            Insert bio here. Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit. Donec consectetur leo
+                            non tempor blandit.
+                          </p>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="py-4 px-4 border-b border-gray-200">
+                      <p>Date:</p>
+                      <p>Time:</p>
+                      <p>Meeting Place:</p>
+                      <p>Event:</p>
+                      <p>Status:</p>
+                    </td>
+                    <td class="py-4 px-4 border-b border-gray-200 text-center">
+                      <div class="flex justify-center space-x-2">
+                        <button
+                          class="bg-green-600 text-white py-1 px-3 rounded-full"
+                        >
+                          Remind
+                        </button>
+                        <button
+                          class="bg-red-600 text-white py-1 px-3 rounded-full cancel-btn"
+                        >
+                          Cancel
+                        </button>
+                      </div>
+                    </td>
+                    <td class="py-4 px-4 border-b border-gray-200">
+                      <button
+                        class="bg-green-600 text-white py-1 px-3 rounded-full write-review-btn"
+                      >
+                        Write Review
+                      </button>
+                    </td>
+                  </tr>
+                  <!-- Repeat for additional rows as needed -->
+                </tbody>
+              </table>
+            </div>
+            <div class="text-center mt-4">
+              <a class="text-green-600" href="#">View More...</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Notification Section -->
+        <div class="w-1/3">
+          <h2 class="text-xl font-bold mb-4">Notification</h2>
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <div class="space-y-4">
+              <div class="flex items-center space-x-4">
+                <div
+                  class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center"
+                >
+                  <img
+                    alt="Notification Picture"
+                    class="rounded-full"
+                    height="64"
+                    src="https://placehold.co/64x64"
+                    width="64"
+                  />
+                </div>
+                <div>
+                  <h3 class="font-bold">Insert Here</h3>
+                  <p class="text-gray-600">
+                    Insert bio here. Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Donec consectetur leo non tempor blandit.
+                  </p>
+                </div>
+              </div>
+              <!-- Repeat for additional notifications -->
+            </div>
+            <div class="text-center mt-4">
+              <a class="text-green-600" href="#">View More...</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cancel Modal -->
+    <div id="cancelModal" class="modal">
+      <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-lg">
+        <h2 class="text-lg font-semibold text-green-800 mb-4">
+          Please provide your reason below
+        </h2>
+        <textarea
+          class="w-full h-32 p-4 border border-gray-300 rounded-lg"
+          maxlength="255"
+        ></textarea>
+        <p class="mt-6 text-lg font-semibold text-green-800">
+          Are you sure you want to cancel this booking?
+        </p>
+        <div class="flex items-center mt-2">
+          <input type="checkbox" id="agree" class="mr-2" />
+          <label for="agree" class="text-gray-600 text-sm">
+            <i class="fas fa-info-circle"></i> I agree to the policy.
+          </label>
+        </div>
+        <div class="flex justify-center mt-6 space-x-4">
+          <button
+            class="bg-red-500 text-white py-2 px-6 rounded-lg close-modal"
+          >
+            Go Back
+          </button>
+          <button class="bg-green-500 text-white py-2 px-6 rounded-lg">
+            Proceed
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Write Review Modal -->
+    <div id="reviewModal" class="modal">
+      <div class="bg-white p-6 rounded-lg shadow-lg w-96">
+        <div class="mb-4">
+          <label class="block text-gray-700 text-lg font-bold mb-2"
+            >How was your experience?</label
+          >
+          <div class="flex space-x-2">
+            <i class="fas fa-star text-green-800 text-2xl"></i>
+            <i class="fas fa-star text-green-800 text-2xl"></i>
+            <i class="fas fa-star text-green-800 text-2xl"></i>
+            <i class="fas fa-star text-green-800 text-2xl"></i>
+            <i class="fas fa-star text-green-800 text-2xl"></i>
+          </div>
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-lg font-bold mb-2"
+            >Comments and Suggestions</label
+          >
+          <textarea
+            class="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-800"
+            rows="4"
+            maxlength="255"
+          ></textarea>
+          <div class="text-right text-gray-500 text-sm">0/255</div>
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-lg font-bold mb-2"
+            >Rate the Place</label
+          >
+          <div class="flex space-x-2">
+            <i class="fas fa-star text-green-800 text-2xl"></i>
+            <i class="fas fa-star text-green-800 text-2xl"></i>
+            <i class="fas fa-star text-green-800 text-2xl"></i>
+            <i class="fas fa-star text-green-800 text-2xl"></i>
+            <i class="fas fa-star text-green-800 text-2xl"></i>
+          </div>
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-lg font-bold mb-2"
+            >Rate the Event (optional)</label
+          >
+          <div class="flex space-x-2">
+            <i class="fas fa-star text-green-800 text-2xl"></i>
+            <i class="fas fa-star text-green-800 text-2xl"></i>
+            <i class="fas fa-star text-green-800 text-2xl"></i>
+            <i class="fas fa-star text-green-800 text-2xl"></i>
+            <i class="fas fa-star text-green-800 text-2xl"></i>
+          </div>
+        </div>
+        <div class="flex justify-between">
+          <button
+            class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600"
+          >
+            Save
+          </button>
+          <button
+            class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 close-review-modal"
+          >
+            Exit
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Get modal elements
+      const reviewModal = document.getElementById("reviewModal");
+      const cancelModal = document.getElementById("cancelModal");
+
+      // Open Write Review Modal
+      document.querySelectorAll(".write-review-btn").forEach((button) => {
+        button.addEventListener("click", () => {
+          reviewModal.classList.add("active");
+        });
+      });
+
+      // Close Write Review Modal
+      document.querySelectorAll(".close-review-modal").forEach((button) => {
+        button.addEventListener("click", () => {
+          reviewModal.classList.remove("active");
+        });
+      });
+
+      // Open Cancel Modal
+      document.querySelectorAll(".cancel-btn").forEach((button) => {
+        button.addEventListener("click", () => {
+          cancelModal.classList.add("active");
+        });
+      });
+
+      // Close Cancel Modal
+      document.querySelectorAll(".close-modal").forEach((button) => {
+        button.addEventListener("click", () => {
+          cancelModal.classList.remove("active");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,577 @@
+<html>
+  <head>
+    <title>CompaniON</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="genuserhomepage.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="Assets/logo.png" alt="CompaniON Logo" />
+      </div>
+
+      <div class="nav">
+        <div class="search-bar">
+          <input placeholder="What are you looking for?" type="text" />
+        </div>
+        <ul>
+          <li><a href="index.html">Home </a></li>
+          <li><a href="rentcompanion.html">Companion </a></li>
+          <li><a href="howitworks.html">How it works </a></li>
+          <li><a href="">Profile</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="main-content">
+      <div class="discover1-section">
+          <div class="text-content">
+            <h1>Welcome Users!</h1>
+            <p>
+                We're glad to have you here! Start your journey by exploring a 
+                variety of companions tailored to your needs. Whether you're 
+                looking for a friendly chat, company for events, or a personalized 
+                experience, we've got you covered!
+            </p>
+            <div class="buttons">
+              <a class="btn" href="#discover-container" onclick="scrollToDiscoverSection()">Discover more</a>   <a class="btn-see" href="rentcompanion.html">See all companions</a>
+          </div>
+
+          </div>
+          <div class="image-content">
+            <img alt="Placeholder image" src="Assets/homepage.png" />
+          </div>
+      </div>
+      
+     
+      <div class="steps">
+        <div class="icons-container">
+            <div class="step">
+                <img alt="Icon of a verified user with a checkmark" src="Assets/1.png"/>
+                <div class="step-title">Verify</div>
+                <div class="step-description">
+                    Complete your profile and verify your identity to ensure a safe and secure experience.
+                </div>
+            </div>
+            <div class="arrow">
+                <i class="fas fa-arrow-right"></i>
+            </div>
+            <div class="step">
+                <img alt="Icon of a magnifying glass searching for companions" src="Assets/2.png"/>
+                <div class="step-title">Find Companion</div>
+                <div class="step-description">
+                    Browse profiles and discover companions that match your preferences and needs.  
+                </div>
+            </div>
+            <div class="arrow">
+                <i class="fas fa-arrow-right"></i>
+            </div>
+            <div class="step">
+                <img alt="Icon of a calendar with a clock" src="Assets/3.png">
+             <div class="step-title">Book Companion</div>
+                <div class="step-description">
+                    Select a time and confirm your booking with the companion of your choice.
+                </div>
+            </div>
+        </div>
+       </div>
+      <div class="discover-container" id="discover-container">
+        <div class="centered-container">
+          <h1>Discover More</h1>
+        </div>
+      <div class="tabs">
+        <div class="tab active" onclick="showContent('events')">Events</div>
+        <div class="tab" onclick="showContent('places')">Places</div>
+        <div class="tab" onclick="showContent('plans')">Plans</div>
+      </div>
+
+  
+
+    
+        <!-- Events Content -->
+        <div class="content" id="events">
+            <div class="card">
+                <h3>Milo Marathon</h3> 
+                <img alt="Event Image" height="150" src="Assets/milo.jpg" width="300" />
+                <button onclick="openModal('eventModal1')">View Event</button>
+            </div>
+            <div class="card">
+                <h3>Barako Fest 2024</h3>
+                <img alt="Event Image" height="150" src="Assets/barako.jpg" width="300" />
+                <button onclick="openModal('eventModal2')">View Event</button>
+            </div>
+            <div class="card">
+                <h3>CICS Day at BatStateU Lipa</h3>
+                <img alt="Event Image" height="150" src="Assets/cics.jpg" width="300" />
+                <button onclick="openModal('eventModal3')">View Event</button>
+            </div>
+        </div>
+    
+        <!-- Places Content -->
+        <div class="content" id="places" style="display: none;">
+            <div class="card">
+                <h3>The Outlets at Lipa</h3>
+                <img alt="Place Image" height="150" src="Assets/outlets.jpg" width="300" />
+                <button onclick="openModal('placesModal1')">View Place</button>
+            </div>
+            <div class="card">
+                <h3>Robinsons Place</h3>
+                <img alt="Place Image" height="150" src="Assets/rob.jpg" width="300" />
+                <button onclick="openModal('placesModal2')">View Place</button>
+            </div>
+            <div class="card">
+                <h3>SM City Lipa</h3>
+                <img alt="Place Image" height="150" src="Assets/smlipa.jpg" width="300" />
+                <button onclick="openModal('placesModal3')">View Place</button>
+            </div>
+        </div>
+    
+        <!-- Plans Content -->
+        <div class="content" id="plans" style="display: none;">
+          <div class="card">
+            <h3> Nature Escape </h3>
+            <img alt="Place Image" height="150" src="Assets/naturwescape.jpg" width="300" />
+            </div>
+
+            <div class="card">
+              <h3>Coffee and Conversations</h3>
+              <img alt="Place Image" height="150" src="Assets/cofeeandconvo.jpg" width="300" />
+                </div>
+
+                <div class="card">
+                  <h3>Volunteer Together</h3>
+                  <img alt="Place Image" height="150" src="Assets/volnteer.jpg" width="300" />
+                    </div>
+
+                    <div class="card">
+                      <h3>Fitness Buddy</h3>
+                      <img alt="Place Image" height="150" src="Assets/gym.jpg" width="300" />
+                        </div>
+                      
+                        <div class="card">
+                          <h3>Book Club and Discussions</h3>
+                          <img alt="Place Image" height="150" src="Assets/book.jpg" width="300" />
+                            </div>
+
+                            <div class="card">
+                              <h3>Art & Creativity Workshop</h3>
+                              <img alt="Place Image" height="150" src="Assets/artgal.jpg" width="300" />
+                                </div>
+                
+            
+
+            
+            
+        
+    </div>
+    
+            <!-- Modal for Event 1 -->
+            <div id="eventModal1" class="modal">
+              <div class="modal-content">
+                  <span class="close" onclick="closeModal('eventModal1')">&times;</span>
+                  
+                  <div class="event-header">
+                      <img src="Assets/milo.jpg" alt="Event 1 Image">
+                      <div class="event-details">
+                          <h1>Milo Marathon</h1>
+                          <p>The Milo Marathon is the Philippines' premier running event, bringing together athletes, fitness enthusiasts, and families for a day of fun, fitness, and community. With a legacy spanning over four decades, the Milo Marathon is more than just a race—it's a celebration of perseverance, sportsmanship, and active living.</div>
+                  </div>
+                  
+                  <div class="event-description">
+                    The Milo Marathon welcomes participants of all levels—from elite athletes chasing personal bests to casual joggers and first-timers. With categories like the 42K marathon, 21K half, 10K, 5K fun run, and 3K family run, there’s something for everyone.
+                    Beyond the race, it fosters values of discipline, determination, and teamwork. Part of the proceeds supports sports equipment donations to underprivileged schools, inspiring future generations to live actively.
+                 </div>
+                  
+                  <div class="event-images">
+                      <img src="Assets/mil1.jpg" alt="Event Image 1">
+                      <img src="Assets/mil2.jpg"Event Image 2">
+                      <img src="Assets/mil3.jpeg" alt="Event Image 3">
+                  </div>
+              </div>
+          </div>
+           <!-- Modal for Event 2 -->
+          <div id="eventModal2" class="modal">
+              <div class="modal-content">
+                  <span class="close" onclick="closeModal('eventModal2')">&times;</span>
+                  
+                  <div class="event-header">
+                      <img src="Assets/bf.jpg"Event 1 Image">
+                      <div class="event-details">
+                          <h1>BarakoFest 2024</h1>
+                          <p>The Barako Fest is a vibrant celebration of Lipa City's cultural pride and heritage, centered around its world-renowned Barako coffee. Held annually, this event brings together locals and visitors to experience the rich flavors, traditions, and artistry that make Batangas coffee unique.</p>
+                      </div>
+                  </div>
+                  
+                  <div class="event-description">
+                    njoy a variety of activities, including coffee tastings, brewing competitions, cultural performances, and local artisan markets. With food stalls offering Batangueño delicacies and live entertainment, the festival is a perfect blend of tradition and festivity. Come to Lipa's Barako Fest, sip the bold brew that defines a region, and celebrate the culture and spirit of Batangas!</div>
+                  
+                  <div class="event-images">
+                      <img src="Assets/art.jpg" alt="Event Image 1">
+                      <img src="Assets/ppl.jpg" alt="Event Image 2">
+                      <img src="Assets/vice.jpg" alt="Event Image 3">
+                  </div>
+              </div>
+          </div>
+
+           <!-- Modal for Event 1 -->
+          <div id="eventModal3" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('eventModal3')">&times;</span>
+                
+                <div class="event-header">
+                    <img src="Assets/cicss.jpg" alt="Event 1 Image">
+                    <div class="event-details">
+                        <h1>CICS Day</h1>
+                        <p>The CICS Day at Batangas State University Lipa is a dynamic celebration that showcases the talents and ingenuity of students from the College of Informatics and Computing Sciences (CICS). The event features a variety of exciting activities, including coding hackathons, tech talks and seminars, e-sports tournaments, IT exhibits, and creative competitions, promoting both academic excellence and student camaraderie.</p>
+                    </div>
+                </div>
+                
+                <div class="event-description">
+                    This event highlights innovation, teamwork, and leadership while providing opportunities for students to connect, learn, and grow. Whether you're passionate about technology or just looking to have fun, CICS Week offers something for everyone.
+
+                    Come join CICS Week at BatStateU Lipa and celebrate technology, teamwork, and innovation—one step closer to shaping the future!</div>
+                
+                <div class="event-images">
+                    <img src="Assets/cics1.jpg"Event Image 1">
+                    <img src="Assets/cics2.jpg" alt="Event Image 2">
+                    <img src="Assets/cics3.jpg" alt="Event Image 3">
+                </div>
+            </div>
+        </div>  
+
+
+
+        <!-- Modal for Places 1 -->
+        <div id="placesModal1" class="modal">
+          <div class="modal-content">
+              <span class="close" onclick="closeModal('placesModal1')">&times;</span>
+              
+              <div class="event-header">
+                  <img src="Assets/funday.jpg" alt="Event 1 Image">
+                  <div class="event-details">
+                      <h1>The Outlets at Lipa</h1>
+                      <p>The Outlets at Lipa is a premier shopping and lifestyle destination located in the heart of Batangas. Known for its open-air layout and year-round discounts, it offers a variety of local and international brands at outlet prices. From fashion, footwear, and sportswear to home essentials and electronics, there’s something for everyone.</p>
+                  </div>
+              </div>
+              
+              <div class="event-description">
+                Beyond shopping, The Outlets at Lipa features dining options, recreational spaces, and events areas, making it a perfect venue for family outings and gatherings. Whether you're looking for great deals, delicious meals, or a day of leisure, The Outlets at Lipa promises a refreshing retail experience with something for every lifestyle.</div>
+              
+              <div class="event-images">
+                  <img src="Assets/field.jpg" alt="Event Image 1">
+                  <img src="Assets/outlets2.png" alt="Event Image 2">
+                  <img src="Assets/outlets3.png" alt="Event Image 3">
+              </div>
+          </div>
+      </div>
+    
+          <!-- Modal for Places 2 -->
+      <div id="placesModal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('placesModal2')">&times;</span>
+            
+            <div class="event-header">
+                <img src="Assets/robportrait.jpg" alt="Event 1 Image">
+                <div class="event-details">
+                    <h1>Places 2</h1>
+                    <p>Robinsons Place Lipa is a vibrant shopping mall offering a wide selection of retail stores, dining options, entertainment facilities, and essential services. As a popular destination for locals and visitors alike, it houses a mix of local and international brands, making it ideal for everything from casual shopping to special purchases.</p>
+                </div>
+            </div>
+            
+            <div class="event-description">
+                The mall features cinemas, grocery stores, salons, and family-friendly attractions, ensuring that there’s something for everyone. Whether you're looking to shop, dine, or unwind, Robinsons Place Lipa provides a comfortable and enjoyable experience with easy accessibility and ample parking.
+            </div>
+            
+            <div class="event-images">
+                <img src="Assets/rob1.jpg" alt="Event Image 1">
+                <img src="Assets/rob2.jpg" alt="Event Image 2">
+                <img src="Assets/rob3.jpg" alt="Event Image 3">
+            </div>
+        </div>
+    </div>
+  
+   <!-- Modal for Places 3 -->
+   <div id="placesModal3" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('placesModal3')">&times;</span>
+        
+        <div class="event-header">
+            <img src="Assets/smmlipaa.png" alt="Event 1 Image">
+            <div class="event-details">
+                <h1>SM City Lipa</h1>
+                <p>SM City Lipa is the region’s go-to hub for shopping, dining, and entertainment. With its wide array of fashion boutiques, restaurants, supermarkets, and recreational spaces, it caters to the diverse needs of individuals and families. Known for hosting seasonal events, sales, and activities, SM Lipa offers more than just shopping—it’s a lifestyle destination.</p>
+            </div>
+        </div>
+        
+        <div class="event-description">
+            From cinemas and arcades to cafés and food courts, SM Lipa ensures that every visit is a fun-filled experience. Whether you're running errands, enjoying a meal, or catching a movie, SM City Lipa has it all under one roof! </div>
+        
+        <div class="event-images">
+            <img src="Assets/smlipa.jpg" alt="Event Image 1">
+            <img src="Assets/sm2.jpg" alt="Event Image 2">
+            <img src="Assets/sm3.jpg" alt="Event Image 3">
+        </div>
+    </div>
+</div>
+
+    
+</div>
+</div>
+    <script>
+
+function scrollToDiscoverSection() {
+    // Target the discover section by its ID
+    document.getElementById('#discover-container').scrollIntoView({
+        behavior: 'smooth'
+    });
+}
+
+
+// Open the modal for a specific event
+function openModal(modalId) {
+    var modal = document.getElementById(modalId);
+    modal.style.display = "block";
+    document.body.style.overflow = 'hidden';
+}
+
+// Close the modal
+function closeModal(modalId) {
+    var modal = document.getElementById(modalId);
+    modal.style.display = "none";
+        document.body.style.overflow = 'hidden';
+}
+
+// Close the modal when clicking outside of it
+window.onclick = function(event) {
+    var modals = document.getElementsByClassName("modal");
+    for (var i = 0; i < modals.length; i++) {
+        if (event.target == modals[i]) {
+            modals[i].style.display = "auto";
+            document.body.style.overflow = 'auto';
+        }
+    }
+};
+
+
+
+
+      function showContent(tab) {
+        document.getElementById("events").style.display = "none";
+        document.getElementById("places").style.display = "none";
+        document.getElementById("plans").style.display = "none";
+        document.querySelectorAll(".tab").forEach(function (el) {
+          el.classList.remove("active");
+        });
+        document.getElementById(tab).style.display = "flex";
+        document
+          .querySelector(".tab[onclick=\"showContent('" + tab + "')\"]")
+          .classList.add("active");
+      }
+
+
+
+// Function to open the modal
+function openModal(modalId) {
+        document.getElementById(modalId).style.display = 'flex';
+    }
+
+    // Function to close the modal
+    function closeModal(modalId) {
+        document.getElementById(modalId).style.display = 'none';
+    }
+
+    // Close modal if clicked outside content
+    window.onclick = function(event) {
+        var privacyModal = document.getElementById('privacyModal');
+        var termsModal = document.getElementById('termsModal');
+        
+        if (event.target == privacyModal) {
+            privacyModal.style.display = 'none';
+        }
+        if (event.target == termsModal) {
+            termsModal.style.display = 'none';
+        }
+    }
+
+    </script>
+    
+    <div class="testimonials">
+      <h2>Trusted by Thousands of Happy Customer</h2>
+      <div class="testimonial">
+        <img alt="Customer photo" height="50" src="Assets/4.png" width="50" />
+        <span class="name"> Lydia Mae </span>
+        <span class="rating"> ★ 4.5 </span>
+        <p>
+        I had such a wonderful experience! The companion I booked was 
+        professional, friendly, and made me feel at ease the entire time.
+        Highly recommended for anyone seeking a genuine connection!
+        </p>
+      </div>
+      <div class="testimonial">
+        <img alt="Customer photo" height="50" src="Assets/5.png" width="50" />
+        <span class="name"> Crystal Tyson </span>
+        <span class="rating"> ★ 4.5 </span>
+        <p>
+            The service was easy to use, and the companion exceeded my 
+            expectations. I appreciated the attention to detail and how 
+            seamless the booking process was. Definitely a 5-star experience 
+            overall!
+        </p>
+      </div>
+      <div class="testimonial">
+        <img alt="Customer photo" height="50" src="Assets/6.png" width="50" />
+        <span class="name"> Earl John </span>
+        <span class="rating"> ★ 4.5 </span>
+        <p>
+            I was pleasantly surprised by how smooth and enjoyable 
+            the entire experience was. The companion was kind, punctual,
+            and exactly what I was looking for. Will be booking again soon!
+        </p>
+      </div>
+    </div>
+  </div>  
+
+    <footer>
+      <div class="logo">CompaniON</div>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/">
+          <i class="fab fa-facebook-f"> </i>
+        </a>
+        <a href="https://x.com/?lang=en">
+          <i class="fab fa-twitter"> </i>
+        </a>
+        <a href="https://www.instagram.com/">
+          <i class="fab fa-instagram"> </i>
+        </a>
+        <a href="https://www.linkedin.com">
+          <i class="fab fa-linkedin-in"> </i>
+        </a>
+      </div>
+      <div class="links">
+        <a href="#" onclick="openModal('privacyModal')">Privacy Policy</a>
+        <a href="#" onclick="openModal('termsModal')">Terms & Condition</a>
+      </div>
+    </footer>
+<!-- Privacy & Policy Modal -->
+<div id="privacyModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('privacyModal')">&times;</span>
+      <h2>Privacy Policy</h2>
+      <p><strong>Effective Date:</strong> [Insert Date]</p>
+  
+      <h3>1. Information We Collect</h3>
+      <ul>
+        <li><strong>Personal Information:</strong> Name, email, phone number, and date of birth.</li>
+        <li><strong>Verification Data:</strong> ID and profile photo.</li>
+        <li><strong>Activity Data:</strong> Bookings, reviews, and platform interactions.</li>
+        <li><strong>Device Information:</strong> IP address, browser type, and OS.</li>
+        <li><strong>Location Data:</strong> GPS information for better service.</li>
+      </ul>
+  
+      <h3>2. How We Use Your Information</h3>
+      <ul>
+        <li>To provide personalized recommendations and bookings.</li>
+        <li>To verify identities and maintain platform security.</li>
+        <li>To analyze usage and improve services.</li>
+        <li>To send booking notifications and updates.</li>
+      </ul>
+  
+      <h3>3. Sharing of Information</h3>
+      <p>We share your information with:</p>
+      <ul>
+        <li>Companions for bookings and coordination.</li>
+        <li>Service providers (e.g., payment processors).</li>
+        <li>Authorities when required by law.</li>
+      </ul>
+  
+      <h3>4. Security and Data Retention</h3>
+      <ul>
+        <li>Data is encrypted and access is restricted.</li>
+        <li>Your data will be retained while your account is active or as legally required.</li>
+      </ul>
+  
+      <h3>5. Your Rights</h3>
+      <ul>
+        <li>Access and correct your personal data.</li>
+        <li>Request data deletion, subject to legal requirements.</li>
+        <li>Manage notifications and opt out of communication.</li>
+      </ul>
+  
+      <h3>6. Updates to this Policy</h3>
+      <p>We may update this policy periodically. We will notify users of significant changes.</p>
+  
+      <h3>7. Contact Us</h3>
+      <p>Email: support@companionapp.com</p>
+    </div>
+  </div>
+  
+  <!-- Terms and Conditions Modal -->
+  <div id="termsModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('termsModal')">&times;</span>
+      <h2>Terms and Conditions</h2>
+      <p><strong>Effective Date:</strong> [Insert Date]</p>
+  
+      <h3>1. User Eligibility</h3>
+      <ul>
+        <li>Users must be at least 18 years old.</li>
+        <li>Government-issued ID is required for verification.</li>
+      </ul>
+  
+      <h3>2. Companion Booking</h3>
+      <ul>
+        <li>Two-factor authentication (2FA) is required for bookings.</li>
+        <li>Cancellations should be made 24 hours in advance to avoid penalties.</li>
+      </ul>
+  
+      <h3>3. Responsibilities of Companions</h3>
+      <ul>
+        <li>Provide accurate profile information and documents.</li>
+        <li>Deliver professional services as agreed.</li>
+        <li>Account suspension applies for policy violations.</li>
+      </ul>
+  
+      <h3>4. User Responsibilities</h3>
+      <ul>
+        <li>Treat companions respectfully and professionally.</li>
+        <li>Misuse of the platform may result in account suspension.</li>
+      </ul>
+  
+      <h3>5. Payments and Refunds</h3>
+      <p>Payments are processed securely. Refunds depend on the cancellation policy and may take 7 days to process.</p>
+  
+      <h3>6. User Reviews</h3>
+      <p>Reviews should reflect genuine experiences. Inappropriate reviews may be removed by admins.</p>
+  
+      <h3>7. Account Suspension</h3>
+      <p>We reserve the right to suspend or terminate accounts for policy violations.</p>
+  
+      <h3>8. Amendments to Terms</h3>
+      <p>These terms may change at any time, and significant changes will be communicated to users.</p>
+  
+      <h3>9. Governing Law</h3>
+      <p>These terms are governed by the laws of the Philippines.</p>
+  
+      <h3>10. Contact Us</h3>
+      <p>Email: support@companionapp.com</p>
+    </div>
+  </div>
+
+
+
+  <script>
+  function openModal(modalId) {
+    document.getElementById(modalId).style.display = 'block';
+  }
+  
+  function closeModal(modalId) {
+    document.getElementById(modalId).style.display = 'none';
+  }
+
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CompaniON </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="rentcompanion.css" />
+
+ </head>
+ <body>
+    <header>
+        <div class="logo">
+          <img src="Assets/logo.png" alt="CompaniON Logo" />
+        </div>
+  
+        <div class="nav">
+          <div class="search-bar">
+            <input placeholder="What are you looking for?" type="text" />
+          </div>
+          <ul>
+            <li><a href="index.html">Home </a></li>
+            <li><a href="rentcompanion.html">Companion </a></li>
+            <li><a href="howitworks.html">How it works </a></li>
+            <li><a href="generaluserprofile.html">Profile</a></li>
+          </ul>
+        </div>
+      </header>
+<div class="container">
+<div class="left-column">
+<h2>
+ Find your companion
+</h2>
+<div class="companion-card">
+ <h4>
+  @earlla_yvon
+ </h4>
+ <div class="rating">
+  <i class="fas fa-star">
+  </i>
+  <span>
+   4.5
+  </span>
+ </div>
+ <p>
+    An adventurous soul with a passion for exploring the outdoors and capturing stunning landscapes through photography. Whether hiking a trail or simply enjoying a walk in the park, I love immersing myself in nature. With a strong interest in fitness, I often practice yoga and enjoy staying active. Looking for someone to share thoughtful conversations or fun moments? I’m always eager to connect and make every experience enjoyable </p>
+ <a href="companiondetails.html"><button> Book Now </button></a>
+</div>
+<div class="companion-card">
+ <h4>
+  @earl_john
+ </h4>
+ <div class="rating">
+  <i class="fas fa-star">
+  </i>
+  <span>
+   4.5
+  </span>
+ </div>
+ <p>
+    A lover of books and quiet cafes, I enjoy spending my time lost in a good novel or exploring new places to sip coffee. I have a passion for painting and find peace in creating something beautiful from a blank canvas. If you're someone who loves deep conversations and appreciating the little moments, I’m the perfect companion for you. Whether it’s a cozy afternoon or an artistic outing, I’m here to make it special. </p>
+ <button>
+  Book Now
+ </button>
+</div>
+<div class="companion-card">
+ <h4>
+  @kylla_mae
+ </h4>
+ <div class="rating">
+  <i class="fas fa-star">
+  </i>
+  <span>
+   4.5
+  </span>
+ </div>
+ <p>
+    I’m all about staying active and embracing the outdoors. From early morning runs to exploring hidden spots in the city, I love being on the move. When I'm not out in nature, you’ll find me indulging in music, trying new recipes in the kitchen, or watching documentaries. Looking for a companion to share some laughter and fun? I’m always up for new adventures and a good chat. </p>
+ <button>
+  Book Now
+ </button>
+</div>
+<div class="companion-card">
+ <h4>
+  @mhiema_saur
+ </h4>
+ <div class="rating">
+  <i class="fas fa-star-half-alt">
+  </i>
+  <span>
+   3.5
+  </span>
+ </div>
+ <p>
+    Creative at heart, I love experimenting with DIY projects and expressing myself through art. Whether it’s sketching, crafting, or making something from scratch, I enjoy hands-on activities. I also love a good movie marathon and enjoy exploring new genres. If you’re looking for a laid-back companion to share ideas and experiences, I’m always excited to connect and enjoy the moment. </p>
+ <button>
+  Book Now
+ </button>
+</div>
+</div>
+<div class="right-column">
+    <div class="filter">
+    <h3>
+    Filter by
+    </h3>
+    <button>
+    Location
+    </button>
+    <button>
+    Age
+    </button>
+    <button>
+    Availability
+    </button>
+    </div>
+<div class="recommended">
+    <h3>Recommended Places</h3>
+  
+    <!-- Place 1 -->
+    <div class="place">
+      <img alt="Placeholder image for recommended place" height="150" src="Assets/smlipa.jpg" width="300"/>
+      <h4>SM Lipa City</h4>
+      <p>
+        SM City Lipa is the region’s go-to hub for shopping, dining, and entertainment. With its wide array of fashion boutiques, restaurants, supermarkets, and recreational spaces, it caters to the diverse needs of individuals and families.  </p>
+      <button onclick="openModal('modal1')">View Details</button>
+    </div>
+    
+    <!-- Modal for Place 1 -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            
+            <div class="event-header">
+                <img src="Assets/smmlipaa.png" alt="Event 1 Image">
+                <div class="event-details">
+                    <h1>SM City Lipa</h1>
+                    <p>SM City Lipa is the region’s go-to hub for shopping, dining, and entertainment. With its wide array of fashion boutiques, restaurants, supermarkets, and recreational spaces, it caters to the diverse needs of individuals and families. Known for hosting seasonal events, sales, and activities, SM Lipa offers more than just shopping—it’s a lifestyle destination.</p>
+                </div>
+            </div>
+            
+            <div class="event-description">
+                From cinemas and arcades to cafés and food courts, SM Lipa ensures that every visit is a fun-filled experience. Whether you're running errands, enjoying a meal, or catching a movie, SM City Lipa has it all under one roof! </div>
+            
+            
+                <div class="event-images">
+                    <img src="Assets/smlipa.jpg" alt="Event Image 1">
+                    <img src="Assets/sm2.jpg" alt="Event Image 2">
+                    <img src="Assets/sm3.jpg" alt="Event Image 3">
+                </div>
+        </div>
+    </div>
+    
+    <!-- Place 2 -->
+    <div class="place">
+      <img alt="Placeholder image for recommended place" height="150" src="Assets/rob.jpg" width="300"/>
+      <h4>Place 2</h4>
+      <p>
+        The Outlets at Lipa is a premier shopping and lifestyle destination located in the heart of Batangas.      </p>
+      <button onclick="openModal('modal2')">View Details</button>
+    </div>
+    
+    <!-- Modal for Place 2 -->
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            
+            <div class="event-header">
+                <img src="Assets/funday.jpg" alt="Event 1 Image">
+                <div class="event-details">
+                    <h1>The Outlets at Lipa</h1>
+                    <p>The Outlets at Lipa is a premier shopping and lifestyle destination located in the heart of Batangas. Known for its open-air layout and year-round discounts, it offers a variety of local and international brands at outlet prices. From fashion, footwear, and sportswear to home essentials and electronics, there’s something for everyone.</p>
+                </div>
+            </div>
+            
+            <div class="event-description">
+                Beyond shopping, The Outlets at Lipa features dining options, recreational spaces, and events areas, making it a perfect venue for family outings and gatherings. Whether you're looking for great deals, delicious meals, or a day of leisure, The Outlets at Lipa promises a refreshing retail experience with something for every lifestyle.</div>
+           
+            
+            <div class="event-images">
+                <img src="Assets/field.jpg" alt="Event Image 1">
+                <img src="Assets/outlets2.png" alt="Event Image 2">
+                <img src="Assets/outlets3.png" alt="Event Image 3">
+            </div>
+        </div>
+    </div>
+ </div>
+</div>
+</div>
+</div>
+<script>
+    function openModal(modalId) {
+    document.getElementById(modalId).style.display = "flex";
+}
+
+// Function to close modal
+function closeModal(modalId) {
+    document.getElementById(modalId).style.display = "none";
+}
+
+// Close the modal if the user clicks anywhere outside of the modal content
+window.onclick = function(event) {
+    var modals = document.getElementsByClassName('modal');
+    for (let i = 0; i < modals.length; i++) {
+        if (event.target == modals[i]) {
+            modals[i].style.display = "none";
+        }
+    }
+}
+</script>
+</body>
+</html>
